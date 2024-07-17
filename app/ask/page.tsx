@@ -20,11 +20,11 @@ const Ask = () => {
           </div>
           <div className="p-4 py-10 mt-10 bg-white border border-dashed rounded-xl flex flex-col items-center justify-center text-center ">
             <Image
-              src="/ask.svg"
-              width={30}
-              height={30}
+              src="/docs_ask.svg"
+              width={60}
+              height={60}
               alt="GitHub logo"
-              className=""
+              className="bg-light-lavender p-4 rounded-full"
             />
             <h1>Read the docs</h1>
             <p className="text-sm text-light-grey-bg">

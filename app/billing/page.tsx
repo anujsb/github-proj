@@ -40,7 +40,7 @@ const Billing = () => {
             <p className="flex items-center mt-4 text-light-grey-bg">
               <span className="text-3xl  text-black px-1">$0 </span> /month
             </p>
-            <Button className="mt-4 bg-light-grey-2 text-black border hover:bg-5black ">
+            <Button className="mt-4 bg-light-grey-2 text-black border hover:bg-5black shadow-sm">
               Get Started{" "}
               <Image
                 src="/dash-arrow.svg"
@@ -110,14 +110,14 @@ const Billing = () => {
               <span className="text-3xl  text-black px-1">$0 </span> /month per
               developer
             </p>
-            <Button className="mt-4 ">
+            <Button className="mt-4 black-grad-radial shadow-inner border">
               Get Started{" "}
               <Image
                 src="/dash-arrow-white.svg"
                 width={15}
                 height={15}
                 alt="GitHub logo"
-                className="ml-2 text-white"
+                className="ml-2 text-white "
               />
             </Button>
             <div className="mt-4">
@@ -179,7 +179,7 @@ const Billing = () => {
             <p className="flex items-center mt-4 text-light-grey-bg">
               <span className="text-3xl  text-black px-1">Contact us</span>
             </p>
-            <Button className="mt-4 bg-light-grey-2 text-black border hover:bg-5black ">
+            <Button className="mt-4 bg-light-grey-2 text-black border hover:bg-5black shadow-sm ">
               Get Started{" "}
               <Image
                 src="/dash-arrow.svg"

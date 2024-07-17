@@ -1,8 +1,17 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const SideBar: React.FC = () => {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    return pathname === path ? "bg-[#EBEDFC]" : "";
+  };
+
   return (
     <aside
       id="logo-sidebar"
@@ -17,28 +26,27 @@ const SideBar: React.FC = () => {
           <li>
             <Link
               href="/"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/"
+              )}`}
             >
               <Image
                 src="/dashboard.svg"
                 width={15}
                 height={15}
-                alt="GitHub logo"
+                alt="Dashboard logo"
               />
               <span className="ms-3">Dashboard</span>
             </Link>
           </li>
           <li>
-            <Link
-              href="code"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+          <Link
+              href="/code"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/code"
+              )}`}
             >
-              <Image
-                src="/code.svg"
-                width={15}
-                height={15}
-                alt="GitHub logo"
-              />
+              <Image src="/code.svg" width={15} height={15} alt="GitHub logo" />
               <span className="flex-1 ms-3 whitespace-nowrap">Code</span>
               {/* <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
                 Pro
@@ -46,15 +54,17 @@ const SideBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link
+          <Link
               href="/review"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/review"
+              )}`}
             >
               <Image
                 src="/review.svg"
                 width={15}
                 height={15}
-                alt="GitHub logo"
+                alt="review logo"
               />
               <span className="flex-1 ms-3 whitespace-nowrap">Review</span>
               {/* <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
@@ -63,26 +73,25 @@ const SideBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link
+          <Link
               href="/ask"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/ask"
+              )}`}
             >
-              <Image
-                src="/dashboard.svg"
-                width={15}
-                height={15}
-                alt="GitHub logo"
-              />
+              <Image src="/ask.svg" width={15} height={15} alt="ask logo" />
               <span className="flex-1 ms-3 whitespace-nowrap">Ask</span>
             </Link>
           </li>
           <li>
-            <Link
+          <Link
               href="/documentation"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/documentation"
+              )}`}
             >
               <Image
-                src="/dashboard.svg"
+                src="/documentation.svg"
                 width={15}
                 height={15}
                 alt="GitHub logo"
@@ -114,43 +123,49 @@ const SideBar: React.FC = () => {
         </div>
         <ul className="flex flex-col h-min p-1 space-y-2 font-medium bg-[#F8F9FA] rounded-md mt-5 ">
           <li>
-            <Link
+          <Link
               href="/settings"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/settings"
+              )}`}
             >
               <Image
-                src="/dashboard.svg"
+                src="/settings.svg"
                 width={15}
                 height={15}
-                alt="GitHub logo"
+                alt="settings logo"
               />
               <span className="flex-1 ms-3 whitespace-nowrap">Settings</span>
             </Link>
           </li>
           <li>
-            <Link
+          <Link
               href="/billing"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/billing"
+              )}`}
             >
               <Image
-                src="/dashboard.svg"
+                src="/billing.svg"
                 width={15}
                 height={15}
-                alt="GitHub logo"
+                alt="billing logo"
               />
               <span className="flex-1 ms-3 whitespace-nowrap">Billing</span>
             </Link>
           </li>
           <li>
-            <Link
+          <Link
               href="/support"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
+              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+                "/support"
+              )}`}
             >
               <Image
-                src="/dashboard.svg"
+                src="/support.svg"
                 width={15}
                 height={15}
-                alt="GitHub logo"
+                alt="support logo"
               />
               <span className="flex-1 ms-3 whitespace-nowrap">Support</span>
             </Link>

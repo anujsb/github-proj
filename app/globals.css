@@ -76,21 +76,21 @@
   }
 }
 
-
-
-body{
-  background-color: #F8F9FA;
+body {
+  background-color: #f8f9fa;
 }
 
-
-
 .pri-grad-light {
-  background: linear-gradient(#8290EB, #6072E5 );
+  background: linear-gradient(#8290eb, #6072e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .pri-grad-dark {
-  background: linear-gradient(#8290EB, #6072E5 );
+  background: linear-gradient(#8290eb, #6072e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.black-grad-radial {
+  background: radial-gradient(circle, #2e2e2e, #000000);
 }

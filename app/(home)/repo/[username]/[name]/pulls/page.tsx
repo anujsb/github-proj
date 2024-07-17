@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/breadcrumb";
 import { currentUser } from "@clerk/nextjs/server";
 import TableContent from "./table-content";
+import SideBar from "@/components/SideBar";
+import NavBar from "@/components/NavBar";
 
 export default async function RepoDetails({
   params,
@@ -33,22 +35,28 @@ export default async function RepoDetails({
 
   return (
     <>
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/">{params.username}</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{params.name}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      <TableContent prs={prs} name={params.name} />
+      <div>
+        <SideBar />
+        <NavBar />
+        <div className="ml-64 p-4 mt-10 flex flex-col items-center justify-center ">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/code">{params.username}</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{params.name}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <TableContent prs={prs} name={params.name} />
+        </div>
+      </div>
     </>
   );
 }

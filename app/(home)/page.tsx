@@ -27,7 +27,7 @@ const page = () => {
         <div className="grid grid-flow-col grid-cols-2 gap-4">
           <div className=" bg-white  p-4 rounded-lg">
             <Image
-              src="/review.svg"
+              src="/review-dash.svg"
               width={55}
               height={55}
               alt="GitHub logo"
@@ -53,7 +53,7 @@ const page = () => {
           </div>
           <div className="bg-white p-4 rounded-lg">
             <Image
-              src="/ask.svg"
+              src="/ask-dash.svg"
               width={55}
               height={55}
               alt="GitHub logo"
