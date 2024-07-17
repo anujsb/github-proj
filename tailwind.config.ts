@@ -52,7 +52,37 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+      'dark': '#0C0C0C',
+      'black-grey': '#191919',
+      'dark-grey': '#656D76',
+      'light-grey': '#9DA6B0',
+      '10black': 'rgba(0, 0, 0, 0.1)',
+      '10white': 'rgba(255, 255, 255, 0.1)',
+      '40white': 'rgba(255, 255, 255, 0.4)',
+      '5black': 'rgba(0, 0, 0, 0.1)',
+      'mid-grey-bg': '#EBEBEB',
+      'light-grey-bg': '#F8F9FA',
+      'sec-col': '#F8F9FA',
+      'gray-light': '#FBFCFC',
+      'pri': '#6072E5',
+      'lavender': '#8290EB',
+      'light-lavender': '#EBEDFC',
+      'success-pri': '#38756F',
+      'success-sec': '#CDEDE5',
+      'warning-pri': '#7B491B',
+      'warning-sec': 'gba(123, 73, 27, 0.8)',
+      'warning-bg': '#FFFBE5',
+      'red-pri': '#E56060',
+      'red-sec': '#FCEBEB',
+      
       },
+
+
+      backgroundImage: {
+        'primary-grad-light': 'linear-gradient(90deg, #6072E5 0%, #8290EB 100%)',
+      },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

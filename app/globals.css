@@ -32,6 +32,8 @@
   --ring: 0 0% 3.9%;
 
   --radius: 0.5rem;
+
+  --theme-color: #52b3d0;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -72,4 +74,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+
+body{
+  background-color: #F8F9FA;
+}
+
+
+
+.pri-grad-light {
+  background: linear-gradient(#8290EB, #6072E5 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

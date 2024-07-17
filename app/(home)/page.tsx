@@ -1,85 +1,93 @@
-import { currentUser } from "@clerk/nextjs/server";
-import Link from "next/link";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import React from "react";
+import Image from "next/image";
+import SideBar from "@/components/SideBar";
+import NavBar from "@/components/NavBar";
 import { Button } from "@/components/ui/button";
-import axios from "axios";
-import { redirect } from "next/navigation";
 
-const handleGithubRedirectedCode = async (code: string, userId: string) => {
-  await axios
-    .get(`http://localhost:3000/api/github/auth?code=${code}&userId=${userId}`)
-    .catch((_) => {});
-
-  return redirect("/");
-};
-
-export default async function Home({ searchParams }: { searchParams: { code: string } }) {
-  let user = await currentUser();
-
-  if (searchParams && searchParams.code) {
-    await handleGithubRedirectedCode(searchParams.code, user?.id!);
-  }
-
-  const fetchRepos = async () => {
-    const response = await fetch("http://localhost:3000/api/github/repos?userId="+user?.id, {
-      method: "GET",
-      credentials: "include",
-    });
-    const data = await response.json();
-    return data;
-  };
-
-  const repos: any[] = await fetchRepos();
-
+const page = () => {
   return (
-    <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-      <div className="flex flex-col items-center justify-center z-50">
-        <div className="">Welcome, {user?.fullName}</div>
-        <div className="mt-5 items-center flex justify-center flex-col">
-          {!repos || repos.length === 0 ? (
-            <Link
-              className="border border-green-500 p-5 py-3 rounded-lg mt-5"
-              href={`https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}&scope=repo%20read:user%20write:repo_hook%20read:repo_hook%20read:org`}
-            >
-              Authorize Github App
-            </Link>
-          ) : (
-            <>
-              <Table>
-                <TableCaption>A list of your recent repositories</TableCaption>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="w-[100px]">id</TableHead>
-                    <TableHead className="w-[500px]">Repository</TableHead>
-                    <TableHead className="text-right"></TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {repos.slice(0, 5).map((repo, id) => (
-                    <TableRow key={repo.id}>
-                      <TableCell className="font-medium">{id + 1}</TableCell>
-                      <TableCell>{repo.name}</TableCell>
-                      <TableCell className="text-right">
-                        <Button>
-                          <Link href={`/repo/${repo.owner.login}/${repo.name}/pulls`}>Select</Link>
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </>
-          )}
+    <div>
+      <SideBar />
+      <NavBar />
+      <div className="ml-64 p-20 m-10 flex flex-col items-center justify-center ">
+        {/* <div className=""> */}
+        <div className="text-center m-10 px-24">
+          <h1 className="text-4xl">
+            Welcome to <span className="pri-grad-light">CodeGen</span>, Shwetas!
+          </h1>
+          <p className="text-dark-grey">
+            To get an AI code review, start by opening a new pull request. If
+            you already have an open pull request, just add a comment such as
+            <span className="text-lavender">
+              "@codegen-ai please review this."
+            </span>{" "}
+            Keep in mind: there is no autocomplete for @codegen-ai!
+          </p>
         </div>
+        <div className="grid grid-flow-col grid-cols-2 gap-4">
+          <div className=" bg-white  p-4 rounded-lg">
+            <Image
+              src="/review.svg"
+              width={55}
+              height={55}
+              alt="GitHub logo"
+              className="bg-light-lavender p-4 rounded-full"
+            />
+            <div className="flex items-center mt-2">
+              <h1 className="text-lg ">Automated Code Reviews</h1>
+              <p className="bg-success-sec text-success-pri px-1.5 mx-2 rounded-md text-sm">
+                Enabled
+              </p>
+            </div>
+            <p className="text-dark-grey mt-1">
+              Receive comprehensive, AI-driven code reviews on every pull
+              request and commit, ensuring high-quality code with minimal
+              effort.
+            </p>
+            <Button
+              className="mt-2 bg-light-lavender text-pri text-lg"
+              variant="secondary"
+            >
+              Documentation
+            </Button>
+          </div>
+          <div className="bg-white p-4 rounded-lg">
+            <Image
+              src="/ask.svg"
+              width={55}
+              height={55}
+              alt="GitHub logo"
+              className="bg-light-lavender p-4 rounded-full"
+            />
+            {/* <h1 className="text-lg mt-2">Question & Answer</h1> */}
+            <div className="flex items-center mt-2">
+              <h1 className="text-lg ">Question & Answer</h1>
+              <p className="bg-success-sec text-success-pri px-1.5 mx-2 rounded-md text-sm">
+                Enabled
+              </p>
+            </div>
+            <p className="text-dark-grey mt-1">
+              Simply tag @codegen-ai in a pull request comment to ask questions
+              and get instant assistance.
+            </p>
+            <Button
+              className="mt-2 bg-light-lavender text-pri text-lg"
+              variant="secondary"
+            >
+              Documentation <Image
+              src="/arrow.svg"
+              width={7}
+              height={7}
+              alt="GitHub logo"
+              className="mx-2"
+            />
+            </Button>
+          </div>
+        </div>
+        {/* </div> */}
       </div>
     </div>
   );
-}
+};
+
+export default page;
