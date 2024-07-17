@@ -1,15 +1,14 @@
-import React from 'react'
-import SideBar from '@/components/SideBar'
-import NavBar from '@/components/NavBar'
+import React from "react";
+import SideBar from "@/components/SideBar";
+import NavBar from "@/components/NavBar";
 const Documentation = () => {
   return (
-<div>
+    <div>
       <SideBar />
       <NavBar />
-      <div>
-        
-      </div>
-    </div>  )
-}
+      <div className="ml-64 p-4 mt-10 flex flex-col items-center justify-center ">docs</div>
+    </div>
+  );
+};
 
-export default Documentation
+export default Documentation;

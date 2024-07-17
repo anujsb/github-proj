@@ -89,3 +89,8 @@ body{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.pri-grad-dark {
+  background: linear-gradient(#8290EB, #6072E5 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

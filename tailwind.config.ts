@@ -62,7 +62,8 @@ const config = {
       '40white': 'rgba(255, 255, 255, 0.4)',
       '5black': 'rgba(0, 0, 0, 0.1)',
       'mid-grey-bg': '#EBEBEB',
-      'light-grey-bg': '#F8F9FA',
+      'light-grey-2': '#F8F9FA',
+      'light-grey-bg': '#7A7A7A',
       'sec-col': '#F8F9FA',
       'gray-light': '#FBFCFC',
       'pri': '#6072E5',
@@ -80,7 +81,7 @@ const config = {
 
 
       backgroundImage: {
-        'primary-grad-light': 'linear-gradient(90deg, #6072E5 0%, #8290EB 100%)',
+        'primary-grad-light-bg': 'linear-gradient(0deg, #6072E5 0%, #8290EB 100%)',
       },
 
       borderRadius: {

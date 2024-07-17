@@ -78,7 +78,7 @@ const page = () => {
               src="/arrow.svg"
               width={7}
               height={7}
-              alt="GitHub logo"
+              alt="arrow"
               className="mx-2"
             />
             </Button>

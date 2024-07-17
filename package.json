@@ -14,6 +14,7 @@
     "@clerk/themes": "^2.1.8",
     "@octokit/rest": "^20.1.1",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-toast": "^1.1.5",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",

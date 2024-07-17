@@ -58,7 +58,7 @@ export default async function Home({
           <div className="mt-5 items-center flex justify-center flex-col">
             {!repos || repos.length === 0 ? (
               <Link
-                className="border border-green-500 p-5 py-3 rounded-lg mt-5"
+                className="border border-dashed p-5 py-3 rounded-lg mt-5"
                 href={`https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}&scope=repo%20read:user%20write:repo_hook%20read:repo_hook%20read:org`}
               >
                 Authorize Github App

@@ -12,7 +12,7 @@ const SideBar: React.FC = () => {
       <div className="flex items-center space-x-3 rtl:space-x-reverse p-7">
         <h1 className="text-4xl ">CodeGen</h1>
       </div>
-      <div className="h-full grid grid-flow-row px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+      <div className="h-full flex flex-col px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul className="flex flex-col justify-start h-min p-1 space-y-2 font-medium bg-[#F8F9FA] rounded-md">
           <li>
             <Link
@@ -34,7 +34,7 @@ const SideBar: React.FC = () => {
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
             >
               <Image
-                src="/dashboard.svg"
+                src="/code.svg"
                 width={15}
                 height={15}
                 alt="GitHub logo"
@@ -51,7 +51,7 @@ const SideBar: React.FC = () => {
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
             >
               <Image
-                src="/dashboard.svg"
+                src="/review.svg"
                 width={15}
                 height={15}
                 alt="GitHub logo"
@@ -92,22 +92,27 @@ const SideBar: React.FC = () => {
               </span>
             </Link>
           </li>
-          <li>
-            <Link
-              href="/settings"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-[#EBEDFC] dark:hover:bg-gray-700 group"
-            >
-              <Image
-                src="/dashboard.svg"
-                width={15}
-                height={15}
-                alt="GitHub logo"
-              />
-              <span className="flex-1 ms-3 whitespace-nowrap">Settings</span>
-            </Link>
-          </li>
         </ul>
-        <ul className="flex flex-col justify-end h-min p-1 space-y-2 font-medium bg-[#F8F9FA] rounded-md mt-5 ">
+        {/* <div> */}
+        <div className="bg-primary-grad-light-bg text-white p-4 rounded-lg mt-16">
+          <h1 className="text-lg">Upgrade to Continue Codegen</h1>
+          <p className="mt-2 text-light-lavender">
+            <span className="text-white font-semibold">6 days</span> left in
+            your free trial. To continue benefiting from Codegen, upgrade to a
+            paid plan for $25/month per developer.
+          </p>
+          <h1 className="flex text-lg mt-4">
+            Upgrade Now{" "}
+            <Image
+              src="/arrow-white.svg"
+              width={8}
+              height={8}
+              alt="arrow"
+              className="mx-2 text-white"
+            />
+          </h1>
+        </div>
+        <ul className="flex flex-col h-min p-1 space-y-2 font-medium bg-[#F8F9FA] rounded-md mt-5 ">
           <li>
             <Link
               href="/settings"
@@ -151,6 +156,7 @@ const SideBar: React.FC = () => {
             </Link>
           </li>
         </ul>
+        {/* </div> */}
       </div>
     </aside>
   );
