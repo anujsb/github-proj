@@ -1,12 +1,18 @@
+"use client";
+
 import { UserButton } from "@clerk/nextjs";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
 const NavBar: React.FC = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <nav className="border-gray-200 shadow-b-sm border-b ml-64 bg-white">
+    <nav className="border-gray-200 shadow-b-sm border-b ml-64 bg-white dark:bg-black">
       {" "}
       {/* Adjusted margin */}
       <div className="flex flex-wrap items-center justify-between mx-auto p-4">
@@ -72,6 +78,16 @@ const NavBar: React.FC = () => {
                 </Link>
               </Button>
               {/* </Link> */}
+            </li>
+            <li>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                className="dark:text-grey-light"
+              >
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              </Button>
             </li>
             <li className="flex items-center justify-center">
               <UserButton />

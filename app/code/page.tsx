@@ -20,7 +20,7 @@ const handleGithubRedirectedCode = async (code: string, userId: string) => {
     .get(`http://localhost:3000/api/github/auth?code=${code}&userId=${userId}`)
     .catch((_) => {});
 
-  return redirect("/");
+  return redirect("/code");
 };
 
 export default async function Home({
