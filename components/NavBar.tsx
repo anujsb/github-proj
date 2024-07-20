@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="border-gray-200 shadow-b-sm border-b ml-64 bg-white dark:bg-black">
+    <nav className="border-gray-200 shadow-b-sm border-b ml-64 bg-white">
       {" "}
       {/* Adjusted margin */}
       <div className="flex flex-wrap items-center justify-between mx-auto p-4">
@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -79,7 +79,7 @@ const NavBar: React.FC = () => {
               </Button>
               {/* </Link> */}
             </li>
-            <li>
+            {/* <li>
               <Button
                 variant="ghost"
                 size="icon"
@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
               >
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </Button>
-            </li>
+            </li> */}
             <li className="flex items-center justify-center">
               <UserButton />
             </li>

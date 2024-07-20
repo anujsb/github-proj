@@ -15,18 +15,18 @@ const SideBar: React.FC = () => {
   return (
     <aside
       id="logo-sidebar"
-      className="fixed top-0 left-0 w-64 h-screen transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+      className="fixed top-0 left-0 w-64 h-screen transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 "
       aria-label="Sidebar"
     >
       <div className="flex items-center space-x-3 rtl:space-x-reverse p-7">
         <h1 className="text-4xl ">CodeGen</h1>
       </div>
-      <div className="h-full flex flex-col px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+      <div className="h-full flex flex-col px-3 pb-4 overflow-y-auto bg-white ">
         <ul className="flex flex-col justify-start h-min p-1 space-y-2 font-medium bg-[#F8F9FA] rounded-md">
           <li>
             <Link
               href="/"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/"
               )}`}
             >
@@ -42,7 +42,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/code"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/code"
               )}`}
             >
@@ -56,7 +56,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/review"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender group ${isActive(
                 "/review"
               )}`}
             >
@@ -75,7 +75,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/ask"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/ask"
               )}`}
             >
@@ -86,7 +86,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/documentation"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/documentation"
               )}`}
             >
@@ -125,7 +125,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/settings"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/settings"
               )}`}
             >
@@ -141,7 +141,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/billing"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/billing"
               )}`}
             >
@@ -157,7 +157,7 @@ const SideBar: React.FC = () => {
           <li>
           <Link
               href="/support"
-              className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-light-lavender dark:hover:bg-gray-700 group ${isActive(
+              className={`flex items-center p-2 text-gray-900 rounded-lg  hover:bg-light-lavender  group ${isActive(
                 "/support"
               )}`}
             >
