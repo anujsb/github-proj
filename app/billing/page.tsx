@@ -107,7 +107,7 @@ const Billing = () => {
             {/* <hr className="" /> */}
             <div className="border-dashed border-b mt-4"> </div>
             <p className="flex items-center mt-4 text-light-grey-bg">
-              <span className="text-3xl  text-black px-1">$0 </span> /month per
+              <span className="text-3xl  text-black px-1">$20 </span> /month per
               developer
             </p>
             <Button className="mt-4 black-grad-radial shadow-inner border">
