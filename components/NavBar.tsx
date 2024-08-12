@@ -12,12 +12,12 @@ const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="border-gray-200 shadow-b-sm border-b ml-64 bg-white">
+    <nav className="border-mid-grey-bg shadow-b-sm border-b ml-64 bg-white">
       {" "}
       {/* Adjusted margin */}
       <div className="flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/github.svg" width={50} height={50} alt="GitHub logo" />
+          <Image src="/github.svg" width={50} height={50} alt="GitHub logo" className="text-black" />
           <div className="flex flex-col">
             <h1 className="text-lg">Shwetd19</h1>
             <span className="text-sm text-[#7A7A7A]">16 repositories</span>
@@ -65,14 +65,14 @@ const NavBar: React.FC = () => {
                 href="#"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               > */}
-              <Button className="hover:bg-[#3c56ff] bg-pri">
-                <Link href="#" className="flex">
+              <Button className="hover:bg-[#3c56ff] bg-pri text-[#ffff]">
+                <Link href="/billing" className="flex">
                   <Image
                     src="/schedule.svg"
                     width={15}
                     height={15}
                     alt="GitHub logo"
-                    className="mr-2"
+                    className="mr-2 "
                   />
                   Schedule a demo
                 </Link>

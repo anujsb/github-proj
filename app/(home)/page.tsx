@@ -3,8 +3,10 @@ import Image from "next/image";
 import SideBar from "@/components/SideBar";
 import NavBar from "@/components/NavBar";
 import { Button } from "@/components/ui/button";
-
-const page = () => {
+import { currentUser } from '@clerk/nextjs/server';
+const page = async() => {
+  const user = await currentUser();
+  if (!user) return <div>Not signed in</div>;
   return (
     <div>
       <SideBar />
@@ -13,19 +15,20 @@ const page = () => {
         {/* <div className=""> */}
         <div className="text-center m-10 px-24">
           <h1 className="text-4xl">
-            Welcome to <span className="pri-grad-light">CodeGen</span>, Shwetas!
+            Welcome to <span className="pri-grad-light">Eacc.dev</span>,
+            {user?.firstName}!
           </h1>
           <p className="text-dark-grey">
             To get an AI code review, start by opening a new pull request. If
             you already have an open pull request, just add a comment such as
             <span className="text-lavender">
-              "@codegen-ai please review this."
+              &quot;@Eacc.dev-ai please review this.&quot;
             </span>{" "}
-            Keep in mind: there is no autocomplete for @codegen-ai!
+            Keep in mind: there is no autocomplete for @Eacc.dev-ai!
           </p>
         </div>
         <div className="grid grid-flow-col grid-cols-2 gap-4">
-          <div className=" bg-white  p-4 rounded-lg">
+          <div className="bg-white  p-4 rounded-lg">
             <Image
               src="/review-dash.svg"
               width={55}
@@ -39,7 +42,7 @@ const page = () => {
                 Enabled
               </p>
             </div>
-            <p className="text-dark-grey mt-1">
+            <p className="text-dark-grey mt-1 ">
               Receive comprehensive, AI-driven code reviews on every pull
               request and commit, ensuring high-quality code with minimal
               effort.
@@ -49,6 +52,13 @@ const page = () => {
               variant="secondary"
             >
               Documentation
+              <Image
+                src="/arrow.svg"
+                width={7}
+                height={7}
+                alt="arrow"
+                className="mx-2"
+              />
             </Button>
           </div>
           <div className="bg-white p-4 rounded-lg">
@@ -67,23 +77,26 @@ const page = () => {
               </p>
             </div>
             <p className="text-dark-grey mt-1">
-              Simply tag @codegen-ai in a pull request comment to ask questions
+              Simply tag @Eacc.dev-ai in a pull request comment to ask questions
               and get instant assistance.
             </p>
+            <br/>
             <Button
               className="mt-2 bg-light-lavender text-pri text-lg"
               variant="secondary"
             >
-              Documentation <Image
-              src="/arrow.svg"
-              width={7}
-              height={7}
-              alt="arrow"
-              className="mx-2"
-            />
+              Documentation{" "}
+              <Image
+                src="/arrow.svg"
+                width={7}
+                height={7}
+                alt="arrow"
+                className="mx-2"
+              />
             </Button>
           </div>
         </div>
+
         {/* </div> */}
       </div>
     </div>

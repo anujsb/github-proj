@@ -15,7 +15,7 @@ const Ask = () => {
             <h1 className="text-4xl">Ask</h1>
             <p className="text-dark-grey">
               Seek guidance on code, architecture, and more <br />
-              by tagging @codegen-ai.
+              by tagging @Eacc.dev-ai.
             </p>
           </div>
           <div className="p-4 py-10 mt-10 bg-white border border-dashed rounded-xl flex flex-col items-center justify-center text-center ">
@@ -35,7 +35,7 @@ const Ask = () => {
             <div className="p-2">
               <h1>Allow Q&A on Pull Requests</h1>
               <p className="text-sm text-light-grey-bg">
-                Let developers tag @codegen-ai to ask questions directly on pull
+                Let developers tag @Eacc.dev-ai to ask questions directly on pull
                 requests.
               </p>
             </div>

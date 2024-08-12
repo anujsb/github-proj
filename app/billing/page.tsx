@@ -28,7 +28,7 @@ const Billing = () => {
             />
             <div className="flex items-center mt-2">
               <h1 className="text-2xl">Free Plan</h1>
-              <p className="bg-light-lavender py-1 px-2 ml-2 rounded-lg text-sm text-[#3D3D3D]">
+              <p className="bg-light-lavender py-1 px-2 ml-2 rounded-lg text-sm text-pri">
                 For Developers
               </p>
             </div>
@@ -97,7 +97,7 @@ const Billing = () => {
             />
             <div className="flex items-center mt-2">
               <h1 className="text-2xl">pro</h1>
-              <p className="bg-light-lavender py-1 px-2 ml-2 rounded-lg text-sm text-[#3D3D3D]">
+              <p className="bg-light-lavender py-1 px-2 ml-2 rounded-lg text-sm text-pri">
                 For Businesses
               </p>
             </div>
@@ -110,7 +110,7 @@ const Billing = () => {
               <span className="text-3xl  text-black px-1">$20 </span> /month per
               developer
             </p>
-            <Button className="mt-4 black-grad-radial shadow-inner border">
+            <Button className="mt-4 black-grad-radial shadow-inner border text-white dark:text-black">
               Get Started{" "}
               <Image
                 src="/dash-arrow-white.svg"
@@ -167,7 +167,7 @@ const Billing = () => {
             />
             <div className="flex items-center mt-2">
               <h1 className="text-2xl">Enterprise</h1>
-              <p className="bg-light-lavender py-1 px-2 ml-2 rounded-lg text-sm text-[#3D3D3D]">
+              <p className="bg-light-lavender py-1 px-2 ml-2 rounded-lg text-sm text-pri">
                 For Organizations
               </p>
             </div>

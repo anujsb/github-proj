@@ -20,7 +20,7 @@ const Review = () => {
             <div className="p-2">
               <h1>Automatically Review PRs</h1>
               <p className="text-sm text-light-grey-bg">
-                Should Codegen review pull requests when they are published and
+                Should Eacc.dev review pull requests when they are published and
                 with each new commit?
               </p>
             </div>
@@ -32,7 +32,7 @@ const Review = () => {
             <div className="p-2">
               <h1>Automatically Summarize PRs</h1>
               <p className="text-sm text-light-grey-bg">
-                Should Codegen summarize pull requests when they are published
+                Should Eacc.dev summarize pull requests when they are published
                 and with each new commit?
               </p>
             </div>
@@ -44,7 +44,7 @@ const Review = () => {
             <div className="p-2">
               <h1>Quiet mode</h1>
               <p className="text-sm text-light-grey-bg">
-                Should Codegen skip commenting 'Looks good to me!' when no
+                Should Eacc.dev skip commenting &apos;Looks good to me!&apos; when no
                 issues are found?
               </p>
             </div>
