@@ -4,9 +4,13 @@ import NavBar from "@/components/NavBar";
 const Documentation = () => {
   return (
     <div>
-      <SideBar />
       <NavBar />
-      <div className="ml-64 p-4 mt-10 flex flex-col items-center justify-center ">docs</div>
+      <div className="rounded-md flex flex-col md:flex-row flex-1 w-full overflow-hidden">
+        <SideBar />
+        <div className=" p-20 m-10 flex flex-col items-center w-full">
+          docs
+        </div>
+      </div>
     </div>
   );
 };

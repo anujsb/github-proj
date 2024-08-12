@@ -35,26 +35,30 @@ export default async function RepoDetails({
 
   return (
     <>
-      <div>
-        <SideBar />
+      <div className="flex flex-col items-center justify-center min-h-screen">
         <NavBar />
-        <div className="ml-64 p-4 mt-10 flex flex-col items-center justify-center ">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/code">{params.username}</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{params.name}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <TableContent prs={prs} name={params.name} />
+        <div className="flex flex-col md:flex-row flex-1 w-full overflow-hidden">
+          <SideBar />
+          <div className="p-1 md:p-10 lg:p-20 mr-2 md:m-6 lg:m-10 flex flex-col items-center w-full">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/code">
+                    {params.username}
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{params.name}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+            <TableContent prs={prs} name={params.name} />
+          </div>
         </div>
       </div>
     </>
