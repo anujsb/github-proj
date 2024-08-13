@@ -62,8 +62,8 @@ export default async function Home({
               Ellipsis to test it's own code, configure a repository.
             </p>
           </div>
-          <div className="flex items-center justify-center">
-            <Button className="px-6 py-10 mt-5 flex flex-col items-center justify-center bg-dark-grey">
+          <div className="flex items-center justify-center ">
+            <Button className="px-6 py-10 mt-5 flex flex-col items-center justify-center bg-ghost-white ">
               <Image
                 src="/code.svg"
                 width={15}
@@ -71,8 +71,8 @@ export default async function Home({
                 alt="code logo"
                 className=" h-5 w-5 flex-shrink-0"
               />
-              <h1 className="text-xl">Configure repository</h1>
-              <p>Allow Ellipsis to test it's own code</p>
+              <h1 className="text-xl text-black ">Configure repository</h1>
+              <p className="text-black font-thin">Allow Ellipsis to test it's own code</p>
             </Button>
           </div>
           <div className="text-center mb-8">
