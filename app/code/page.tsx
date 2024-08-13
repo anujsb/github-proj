@@ -59,7 +59,7 @@ export default async function Home({
             <h1 className="text-3xl">Code</h1>
             <p>
               Ellipsis can generate code on issues and pull requests. To allow
-              Ellipsis to test it's own code, configure a repository.
+              Ellipsis to test it&apos;s own code, configure a repository.
             </p>
           </div>
           <div className="flex items-center justify-center ">
@@ -72,7 +72,7 @@ export default async function Home({
                 className=" h-5 w-5 flex-shrink-0"
               />
               <h1 className="text-xl text-black ">Configure repository</h1>
-              <p className="text-black font-thin">Allow Ellipsis to test it's own code</p>
+              <p className="text-black font-thin">Allow Ellipsis to test it&apos;s own code</p>
             </Button>
           </div>
           <div className="text-center mb-8">
