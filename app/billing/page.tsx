@@ -6,13 +6,16 @@ import Image from "next/image";
 
 const Billing = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="h-screen">
       <NavBar />
-      <div className="flex flex-col md:flex-row flex-1 w-full overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 w-full overflow-hidden min-h-screen">
+        {" "}
         <SideBar />
         <div className="p-1 md:p-10 lg:p-20 mr-2 md:m-6 lg:m-10 flex flex-col items-center w-full">
           <div className="text-center max-w-lg">
-            <h1 className="text-2xl md:text-4xl font-semibold">Pricing made easy</h1>
+            <h1 className="text-2xl md:text-4xl font-semibold">
+              Pricing made easy
+            </h1>
             <p className="text-gray-600 dark:text-gray-300 mt-4">
               Buy fixed seats for unlimited developer access. Unassigned
               developers are excluded. No automatic seat additions or bill
@@ -53,7 +56,9 @@ const Billing = () => {
                 />
               </Button>
               <div className="mt-4">
-                <h1 className="text-pri my-2 font-semibold">Features Included:</h1>
+                <h1 className="text-pri my-2 font-semibold">
+                  Features Included:
+                </h1>
                 <div className="flex items-center my-2 text-gray-600 dark:text-gray-300">
                   <Image
                     src="/tick.svg"
@@ -109,7 +114,8 @@ const Billing = () => {
               </p>
               <div className="border-dashed border-b mt-4"></div>
               <p className="flex items-center justify-center mt-4 text-gray-800 dark:text-gray-300">
-                <span className="text-3xl font-semibold">$20</span> /month per developer
+                <span className="text-3xl font-semibold">$20</span> /month per
+                developer
               </p>
               <Button className="mt-4 black-grad-radial shadow-inner border text-white dark:text-black mx-auto">
                 Get Started
@@ -122,7 +128,9 @@ const Billing = () => {
                 />
               </Button>
               <div className="mt-4">
-                <h1 className="text-pri my-2 font-semibold">Features Included:</h1>
+                <h1 className="text-pri my-2 font-semibold">
+                  Features Included:
+                </h1>
                 <div className="flex items-center my-2 text-gray-600 dark:text-gray-300">
                   <Image
                     src="/tick.svg"
@@ -168,7 +176,9 @@ const Billing = () => {
                 className="bg-light-lavender p-4 rounded-2xl mx-auto"
               />
               <div className="flex flex-col items-center mt-4">
-                <h1 className="text-xl md:text-2xl font-semibold">Enterprise</h1>
+                <h1 className="text-xl md:text-2xl font-semibold">
+                  Enterprise
+                </h1>
                 <p className="bg-light-lavender py-1 px-2 mt-2 rounded-lg text-sm text-pri">
                   For Organizations
                 </p>
@@ -191,7 +201,9 @@ const Billing = () => {
                 />
               </Button>
               <div className="mt-4">
-                <h1 className="text-pri my-2 font-semibold">Features Included:</h1>
+                <h1 className="text-pri my-2 font-semibold">
+                  Features Included:
+                </h1>
                 <div className="flex items-center my-2 text-gray-600 dark:text-gray-300">
                   <Image
                     src="/tick.svg"

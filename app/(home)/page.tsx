@@ -10,9 +10,10 @@ const Page = async () => {
   if (!user) return <div>Not signed in</div>;
 
   return (
-    <div>
+    <div className="h-screen">
       <NavBar />
-      <div className="rounded-md flex flex-col md:flex-row flex-1 w-full overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 w-full overflow-hidden h-screen">
+        {" "}
         <SideBar />
         <div className="p-1 md:p-10 lg:p-20 mr-2 md:m-10 flex flex-col items-center w-full">
           <div className="text-center m-4 md:m-10">
@@ -62,7 +63,7 @@ const Page = async () => {
                 request and commit, ensuring high-quality code with minimal
                 effort.
               </p>
-              
+
               <Button
                 className="mt-2 bg-light-lavender text-pri text-lg"
                 variant="secondary"
@@ -95,7 +96,7 @@ const Page = async () => {
                 Simply tag @Eacc.dev-ai in a pull request comment to ask
                 questions and get instant assistance.
               </p>
-              <br/>
+              <br />
               <Button
                 className="mt-2 bg-light-lavender text-pri text-lg"
                 variant="secondary"

@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="border-mid-grey-bg shadow-b-sm border-b sticky bg-white w-full ">
+    <nav className="border-mid-grey-bg shadow-b-sm border-b fixed bg-white w-full z-10">
       {" "}
       {/* Adjusted margin */}
       <div className="flex flex-wrap items-center justify-between mx-auto p-4">

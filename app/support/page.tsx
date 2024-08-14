@@ -4,14 +4,13 @@ import NavBar from "@/components/NavBar";
 
 const Support = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="h-screen">
       <NavBar />
-      <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 w-full overflow-hidden h-screen">
+        {" "}
         <SideBar />
         <div className="flex flex-col items-center justify-center w-full p-4 md:p-10">
-          <div className="">
-            support
-          </div>
+          <div className="">support</div>
         </div>
       </div>
     </div>

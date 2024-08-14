@@ -50,9 +50,10 @@ export default async function Home({
   const repos: any[] = await fetchRepos();
 
   return (
-    <div className="">
+    <div className="h-screen">
       <NavBar />
-      <div className="rounded-md flex flex-col md:flex-row flex-1 w-full overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 w-full overflow-hidden h-screen">
+        {" "}
         <SideBar />
         <div className="p-1 md:p-10 lg:p-10 mr-2 md:m-10 flex flex-col items-center w-full">
           <div>
@@ -72,7 +73,9 @@ export default async function Home({
                 className=" h-5 w-5 flex-shrink-0"
               />
               <h1 className="text-xl text-black ">Configure repository</h1>
-              <p className="text-black font-thin">Allow Ellipsis to test it&apos;s own code</p>
+              <p className="text-black font-thin">
+                Allow Ellipsis to test it&apos;s own code
+              </p>
             </Button>
           </div>
           <div className="text-center mb-8">

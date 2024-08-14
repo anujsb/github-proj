@@ -140,7 +140,7 @@ const SideBar: React.FC = () => {
         <SidebarBody className="justify-between gap-10 ">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {/* {open ? <Logo /> : <LogoIcon />} */}
-            <div className="mt-8 p-2 flex flex-col justify-start gap-2 bg-ghost-white rounded-xl ">
+            <div className="mt-16 p-2 flex flex-col justify-start gap-2 bg-ghost-white rounded-xl ">
               {links1.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
